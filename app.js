@@ -1,39 +1,12 @@
 const buttons = Array.from(document.querySelectorAll("button"));
 const output = document.getElementById("output");
 const display = document.getElementById("display");
-const del = document.getElementById('del')
+const del = document.getElementById("del");
+const clear = document.querySelector(".clear");
 //////////////////////////////////////////////////////////////////
 
 del.onclick = deleteNumber;
-
-console.log(buttons)
-buttons.forEach(function (e) {
-    e.onclick = function () {
-        if (e.className === "number") {
-            display.innerHTML += e.value;
-            if (e.value === ".") {
-                // display.textContent = e.value;
-            }
-        }
-        let firstValue;
-        let nextValue;
-        firstValue = display.textContent;
-        if (e.className === "operator") {
-            e.target.classList.add("is-depressed")
-            // display.innerHTML += e.value;
-            // switch (e.value) {
-            //     case "*":
-            //         console.log(display.textContent);
-            //         nextValue = display.textContent;
-            //         console.log(nextValue);
-            //         output.innerHTML ;
-            //         console.log(nextValue, firstValue);
-            //         break;
-            }
-        }
-    }
-})
-
+clear.onclick = clearAll;
 /////////////////////////////////////////////////////////////////
 
 class Operate {
@@ -52,12 +25,15 @@ class Operate {
   multNumber(a, b) {
     return a * b;
   }
-
-  clear() {
-    return (display.innerHTML = 0);
-  }
 }
 
-function deleteNumber() {
-  display.textContent = display.textContent.toString().slice(0, -1);
+class Features{
+ clearAll() {
+  display.innerHTML = "";
+  output.innerHTML = 0;
+}
+
+ deleteNumber() {
+  display.innerHTML = display.textContent.toString().slice(0, -1);
+}
 }

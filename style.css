@@ -8,11 +8,11 @@ body {
 }
 
 #container {
-  height: 450px;
+  height: 400px;
   text-align: center;
   margin: auto;
   background-color: #e6e6e6;
-  width: 300px;
+  width: 250px;
   border: 5px double rgba(253, 253, 253, 0.966);
   border-radius: 25px;
 }
@@ -21,7 +21,7 @@ body {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows:repeat(7, 1fr);
   height: 80%;
   bottom: 0px;
   border-bottom-left-radius: 25px;
@@ -31,20 +31,25 @@ body {
 }
 div {
   width: 100%;
-  height: 10%;
+  height: 20%;
   text-align: right;
 }
 #display {
-  padding-top: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding-top: 10px;
+  font-size: .8em;
+
 }
 #output {
-  padding-top: 8%;
-  font-size: bold;
+  padding-top: 1%;
+  font-size: 2.1em;
+
 }
 
 button {
-  height: 50px;
-  width: 60px;
+  height: 40px;
+  width: 50px;
   color: white;
   background-color: #222427;
   border-radius: 5px;
@@ -63,8 +68,8 @@ button {
 }
 
 section {
-  height: 20%;
-  background-color: #333031;
-  margin-bottom: 40px;
-  padding-right:20px;
+  height: 25%;
+  background-color: #ada3a7;
+  margin-bottom: 20px;
+  padding-right:10px;
 }
